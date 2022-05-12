@@ -52,21 +52,16 @@ export const Video = Node.create({
   },
 
   renderHTML({ HTMLAttributes }) {
-    debugger
-
     return [
       'video',
-      { controls: 'true', style: 'width: 100%' },
+      { controls: 'true', style: 'width: 100%', ...HTMLAttributes },
       ['source', HTMLAttributes]
     ]
   },
 
   addCommands() {
     return {
-      setVideo: (src: string) => ({ commands }) => {
-        debugger
-        return commands.insertContent(`<video controls="true" style="width: 100%" src="${src}" />`)
-      },
+      setVideo: (src: string) => ({ commands }) => commands.insertContent(`<video controls="true" style="width: 100%" src="${src}" />`),
 
       toggleVideo: () => ({ commands }) => commands.toggleNode(this.name, 'paragraph'),
     };
@@ -93,7 +88,8 @@ export const Video = Node.create({
 
         props: {
           handleDOMEvents: {
-            drop({ state: { schema, tr }, dispatch, posAtCoords }, event) {
+            drop(view, event) {
+              const { state: { schema, tr }, dispatch } = view
               const hasFiles = event.dataTransfer &&
                 event.dataTransfer.files &&
                 event.dataTransfer.files.length
@@ -108,7 +104,7 @@ export const Video = Node.create({
 
               event.preventDefault()
 
-              const coordinates = posAtCoords({ left: event.clientX, top: event.clientY })
+              const coordinates = view.posAtCoords({ left: event.clientX, top: event.clientY })
 
               videos.forEach(video => {
                 const reader = new FileReader()
