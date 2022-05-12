@@ -1,0 +1,38 @@
+{
+  "name": "@sereneinserenade/tiptap-extension-video",
+  "author": "Jeet Mandaliya (https://github.com/sereneinserenade)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "bugs": {
+    "url": "https://github.com/sereneinserenade/tiptap-extension-video/issues"
+  },
+  "homepage": "https://github.com/sereneinserenade/tiptap-extension-video#readme",
+  "private": false,
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sereneinserenade/tiptap-extension-video.git"
+  },
+  "keywords": [
+    "tiptap",
+    "wysiwyg",
+    "extension-video"
+  ],
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
+}
