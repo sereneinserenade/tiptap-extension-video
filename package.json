@@ -25,8 +25,13 @@
     "extension-video"
   ],
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.7",
+    "@tiptap/react": "^2.0.0-beta.109",
+    "@tiptap/starter-kit": "^2.0.0-beta.184",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "sass": "^1.51.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
