@@ -17,7 +17,7 @@ export const Tiptap: React.FC = () => {
 
   const editor = useEditor({
     extensions: [StarterKit, Video],
-    content: '<p></p><hr><h2>Click on the Add video button, enter URL, add video.</h2><p><strong>Here is an example</strong></p><p><video controls="true" style="width: 100%" src="https://user-images.githubusercontent.com/45892659/168123677-ac153eb0-cc06-4eb4-b1f4-023100b0e4d3.mp4"><source src="https://user-images.githubusercontent.com/45892659/168123677-ac153eb0-cc06-4eb4-b1f4-023100b0e4d3.mp4"></video></p><hr><p></p>',
+    content: '<p></p><p></p><h2>Click on the Add video button, enter URL, add video. Below is an example.</h2><video controls="true" style="width: 100%" src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4"><source src="https://user-images.githubusercontent.com/58986949/115314310-805b2780-a1a7-11eb-8558-648a367ea231.mp4"></video><blockquote><p>Just do it. - Shia LaBeouf</p></blockquote>',
     autofocus: 'start'
   })
 
@@ -51,7 +51,6 @@ export const Tiptap: React.FC = () => {
         <Modal.Body>
           <Input
             clearable
-            bordered
             fullWidth
             color="primary"
             size="lg"
@@ -59,6 +58,7 @@ export const Tiptap: React.FC = () => {
             contentLeft={<FiLink />}
             value={videoUrl}
             onInput={e => setVideoUrl((e.target as HTMLInputElement).value)}
+            autoFocus
           />
         </Modal.Body>
         <Modal.Footer>
