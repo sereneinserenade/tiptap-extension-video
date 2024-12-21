@@ -3,6 +3,7 @@
   "author": "Jeet Mandaliya (https://github.com/sereneinserenade)",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
