@@ -2,6 +2,7 @@
   "name": "@sereneinserenade/tiptap-extension-video",
   "author": "Jeet Mandaliya (https://github.com/sereneinserenade)",
   "license": "MIT",
+  "packageManager": "pnpm@9.15.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
